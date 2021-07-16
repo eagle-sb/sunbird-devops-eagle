@@ -201,7 +201,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/auth/(.*) /auth/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -226,7 +226,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
@@ -251,7 +251,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
@@ -278,7 +278,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
@@ -305,7 +305,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/api/(.*) /$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -329,7 +329,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/api/(.*) /$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -934,7 +934,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
       proxy_set_header X-Scheme $scheme;
@@ -952,7 +952,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/api/channel/v1/read/(.*) /channel/v1/read/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -1090,7 +1090,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/auth/(.*) /auth/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -1115,7 +1115,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
@@ -1140,8 +1140,8 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
-      # Increasing the proxy buffer size
+      proxy_cache_valid 200 0s;      
+# Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
       rewrite ^/api/(.*) /$1 break;
@@ -1167,7 +1167,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
@@ -1194,7 +1194,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/api/(.*) /$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -1218,7 +1218,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/api/(.*) /$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -1796,7 +1796,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
       proxy_set_header X-Scheme $scheme;
@@ -1814,7 +1814,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/api/channel/v1/read/(.*) /channel/v1/read/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -1956,7 +1956,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/auth/(.*) /auth/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -1981,7 +1981,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
@@ -2006,7 +2006,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
@@ -2033,7 +2033,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
@@ -2060,7 +2060,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/api/(.*) /$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -2084,7 +2084,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/api/(.*) /$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -2662,7 +2662,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
       proxy_set_header X-Scheme $scheme;
@@ -2680,7 +2680,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 0s;
       rewrite ^/api/channel/v1/read/(.*) /channel/v1/read/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -2822,7 +2822,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 0s;
       rewrite ^/auth/(.*) /auth/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -2847,7 +2847,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 0s;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
@@ -2872,7 +2872,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
@@ -2899,7 +2899,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
@@ -2926,7 +2926,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 0s;
       rewrite ^/api/(.*) /$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -2950,7 +2950,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 0s;
       rewrite ^/api/(.*) /$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -3528,7 +3528,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 0s;
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
       proxy_set_header X-Scheme $scheme;
@@ -3546,7 +3546,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 0s;
       rewrite ^/api/channel/v1/read/(.*) /channel/v1/read/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -3986,7 +3986,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       rewrite ^/auth/(.*) /auth/$1 break;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
@@ -4011,7 +4011,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 43200;
+      proxy_cache_valid 200 0s;
       proxy_set_header Connection "";
       proxy_set_header Host $host;
       proxy_set_header X-Real-IP {{ nginx_client_public_ip_header | d('$remote_addr') }};
@@ -4036,7 +4036,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
@@ -4063,7 +4063,7 @@ proxyconfig: |-
       proxy_cache_revalidate on;
       proxy_cache_background_update on;
       proxy_cache_lock on;
-      proxy_cache_valid 200 14400s;
+      proxy_cache_valid 200 0s;
       # Increasing the proxy buffer size
       proxy_buffer_size 16k;
       proxy_busy_buffers_size 16k;
